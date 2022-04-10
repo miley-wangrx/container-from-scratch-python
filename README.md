@@ -5,14 +5,16 @@ This is building a container from scratch
 
 ### Build image
 *(If you want to develop yourself)* 
-docker build --tag=hello-duke-cli-210 .
+# docker build --tag=hello-duke-cli-210 .
+docker build --tag app .
 
 ### List docker images
 docker image ls
 
 ### Run my newly built container
 
-docker run -it hello-duke-cli-210 python app.py --name "Big John"
+# docker run -it hello-duke-cli-210 python app.py --name "Big John"
+docker run -it noahgift/cloudapp python app.py --name "Big John"
 
 ### Push to Docker Hub
 
@@ -24,6 +26,8 @@ docker push noahgift/duke102:tagname
 ```bash
 docker pull noahgift/cloudapp:latest
 docker run -it noahgift/cloudapp bash 
+run locally: 
+    docker run -t app python app.py --name "Big John"
 
 #then run python app.py --help
 ```
